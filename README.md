@@ -1,10 +1,8 @@
 # Site Monitoring with Selenium + SMS Notifications (Twilio)
 
-This project uses GitHub Actions to monitor a website twice daily using Selenium in Python. It performs a search on the target page, checks the number of results, compares it with the previous run, and sends an SMS using Twilio if there's a change.
+This project uses GitHub Actions to monitor a website twice daily using Selenium Python. It performs a search on the target page, checks the target locator value, compares it with the previous run, and sends an SMS using Twilio if there's a change.
 
----
-
-## 📁 File Structure
+## File Structure
 
 ```
 site-monitoring-sms/
@@ -20,7 +18,11 @@ site-monitoring-sms/
 ├── .env                         # Environment variables (local use only)
 ```
 
----
+## Tech Stack
+
+- Python + Selenium
+- Twilio for SMS
+- GitHub Actions for automation
 
 ## 🚀 Getting Started
 
@@ -36,9 +38,7 @@ pip install -r requirements.txt
 
 ```env
 TARGET_URL=https://example.com
-SEARCH_TERM=playwright
-SEARCH_INPUT_SELECTOR=input[name="search"]
-RESULT_SELECTOR=.result-item
+RESULT_SELECTOR=result-item
 TWILIO_ACCOUNT_SID=your_account_sid
 TWILIO_AUTH_TOKEN=your_auth_token
 TWILIO_FROM_NUMBER=+1xxxxxxx
@@ -58,8 +58,6 @@ python src/check.py
 Set these under your repository's **Settings > Secrets and variables > Actions**:
 
 - `TARGET_URL`
-- `SEARCH_TERM`
-- `SEARCH_INPUT_SELECTOR`
 - `RESULT_SELECTOR`
 - `TWILIO_ACCOUNT_SID`
 - `TWILIO_AUTH_TOKEN`
@@ -75,15 +73,13 @@ The job is configured to run **twice daily**:
 ```yaml
 on:
   schedule:
-    - cron: "0 8 * * *" # 08:00 UTC
-    - cron: "0 20 * * *" # 20:00 UTC
+    - cron: "0 6 * * *" # 06:00 UTC
+    - cron: "0 18 * * *" # 18:00 UTC
 ```
 
 You can modify the schedule in `.github/workflows/check-site.yml`.
 
----
-
-## 🔮 Future Enhancements & Ideas
+## Future Enhancements & Ideas
 
 Here are some ways to expand the project:
 
@@ -111,11 +107,3 @@ Here are some ways to expand the project:
 
 - Use a real database (SQLite/PostgreSQL).
 - Store result history per target and visualize it.
-
----
-
-## 🛠 Tech Stack
-
-- Python + Selenium
-- Twilio for SMS
-- GitHub Actions for automation

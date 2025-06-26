@@ -45,9 +45,8 @@ def run_check():
 
     try:
         driver.get(TARGET_URL)
-        # Perform search
-
-        time.sleep(3)  # wait for results to load
+        
+        time.sleep(2)  # wait for results to load
 
         try:
             result = driver.find_element(By.CLASS_NAME, RESULT_SELECTOR)
