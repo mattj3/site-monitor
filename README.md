@@ -1,4 +1,4 @@
-# Site Monitoring with Selenium Python + SMS Notifications (Twilio)
+# Site Monitoring with Selenium Python and SMS Notifications (Twilio)
 
 This project uses GitHub Actions to monitor a website twice daily using Selenium Python. It performs a search on the target page, checks the target locator value, compares it with the previous run, and sends an SMS using Twilio if there's a change.
 
@@ -17,12 +17,6 @@ site-monitoring-sms/
 ├── requirements.txt
 ├── .env                         # Environment variables (local use only)
 ```
-
-## Tech Stack
-
-- Python + Selenium
-- Twilio for SMS
-- GitHub Actions for automation
 
 ## Getting Started
 
@@ -75,7 +69,7 @@ on:
 
 You can modify the schedule in `.github/workflows/check-site.yml`.
 
-## Future Enhancements & Ideas
+## Future Enhancements and Ideas
 
 Here are some ways to expand the project:
 
