@@ -67,7 +67,7 @@ on:
     - cron: "0 18 * * *" # 18:00 UTC
 ```
 
-You can modify the schedule in `.github/workflows/check-site.yml`.
+You can modify the schedule in `.github/workflows/check-site.yml`
 
 ## Future Enhancements and Ideas
 
@@ -75,25 +75,25 @@ Here are some ways to expand the project:
 
 ### Monitoring Scope
 
-- Monitor multiple websites or APIs.
-- Check for text presence or specific element content.
+- Monitor multiple websites or APIs
+- Check for text presence or specific element content
 
 ### Notification Options
 
-- Add support for Slack, Discord, Telegram, or email.
-- Create daily summaries instead of instant alerts.
+- Add support for Slack, Discord, Telegram, or email
+- Create daily summaries instead of instant alerts
 
 ### Result Intelligence
 
-- Store a full list of result data, not just count.
-- Add diff comparisons and historical graphs.
+- Store a full list of result data, not just count
+- Add diff comparisons and historical graphs
 
 ### Dashboard & APIs
 
-- Build a simple dashboard UI to display trends.
-- Add user triggers for manual re-checks.
+- Build a simple dashboard UI to display trends
+- Add user triggers for manual re-checks
 
 ### Backend/Data Layer
 
-- Use a real database (SQLite/PostgreSQL).
-- Store result history per target and visualize it.
+- Use a real database (SQLite/PostgreSQL)
+- Store result history per target and visualize it

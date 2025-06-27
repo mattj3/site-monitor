@@ -40,18 +40,18 @@ def save_current(data):
 
 def run_check():
     chrome_options = Options()
-    # chrome_options.add_argument("--headless")  # uncomment if you want headless
+    chrome_options.add_argument("--headless")  # uncomment if you want headless
     driver = webdriver.Chrome(options=chrome_options)
 
     try:
         driver.get(TARGET_URL)
         
-        time.sleep(2)  # wait for results to load
+        time.sleep(1)
 
         try:
             result = driver.find_element(By.CLASS_NAME, RESULT_SELECTOR)
             result_text = result.text.strip()
-            print(f"🔎 Found 1 result with text: {result_text}")
+            print(f"🔎 Found result with text: {result_text}")
         except Exception:
             print("🔎 No results found.")
             result_text = ""
