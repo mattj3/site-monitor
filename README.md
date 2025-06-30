@@ -12,7 +12,7 @@ site-monitoring-sms/
 ├── results/
 │   └── past_results.json        # Persisted result data (managed by artifact)
 ├── src/
-│   ├── check.py                 # Main script for Selenium search and comparison
+│   ├── check.py                 # Main script for Selenium find and compare
 │   └── notify.py                # Twilio SMS integration
 ├── requirements.txt
 ├── .env                         # Environment variables (local use only)
